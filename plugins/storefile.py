@@ -7,7 +7,7 @@ from config import *
 
 #################################### FOR PRIVATE ################################################
 @Client.on_message((filters.document|filters.video|filters.audio|filters.photo) & filters.incoming & ~filters.edited & ~filters.channel)
-async def storefile(c, m):
+async def storefile(mp4, mkv, pdf, jpeg, mp3):
     if IS_PRIVATE:
         if m.from_user.id not in AUTH_USERS:
             return
